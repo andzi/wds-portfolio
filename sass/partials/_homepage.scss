@@ -1,0 +1,85 @@
+// Homepage
+.page-template-homepage-template-php {
+
+	.page-title {
+		font-weight: 400;
+		text-align: center;
+
+		@include rem(font-size, 48px);
+	}
+
+	.page-content {
+		@include rem(font-size, 16px);
+		font-weight: 300;
+		text-align: center;
+	}
+
+	.hentry {
+		margin: 0;
+		padding: 0;
+	}
+
+	.portfolio-filter {
+		overflow: hidden;
+
+		ul {
+			margin: 0 0 2em;
+			padding: 0;
+			text-align: center;
+			width: 100%;
+
+			li {
+				background: #f0f0f0;
+				color: #999;
+				cursor: pointer;
+				display: inline-block;
+				list-style-type: none;
+				text-align: center;
+				margin-right: 1em;
+				padding: .2em .5em;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				&:focus,
+				&:hover {
+					color: #000;
+				}
+			}
+		}
+	}
+
+	.type-jetpack-portfolio{
+		background: #000;
+		float: left;
+		margin: 0 -1px -1px 0;
+		width: 100%;
+
+		@include wider-than(tablet) {
+			width: 50%;
+		}
+
+		@include wider-than(desktop) {
+			width: 33%;
+			cursor: pointer;
+		}
+
+		@include wider-than(large-desktop) {
+			width: 25%;
+		}
+
+		img {
+			display: block;
+		}
+
+		&:hover {
+			background: #000;
+			opacity: .6;
+			transition: all .4s ease-in-out;
+			-webkit-transition: all .4s ease-in-out;
+			-moz-transition: all .4s ease-in-out;
+			-o-transition: all .4s ease-in-out;
+		}
+	}
+}

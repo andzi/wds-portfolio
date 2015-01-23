@@ -1,0 +1,51 @@
+/*
+Theme Name: wds-portfolio
+Theme URI: https://github.com/themeindex/wds-portfolio
+Author: Precode
+Author URI: http://precode.io
+Description: I am a starter theme for portfolios
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wds_portfolio
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+@import "bourbon";
+@import "partials/grid-settings";
+@import "neat";
+
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/sprites";
+
+@import "partials/reset";
+@import "partials/typography";
+@import "partials/elements";
+@import "partials/forms";
+@import "partials/navigation";
+@import "partials/accessibility";
+@import "partials/alignments";
+@import "partials/clearings";
+@import "partials/widgets";
+@import "partials/content";
+@import "partials/infinite-scroll";
+@import "partials/media";
+@import "partials/header";
+@import "partials/homepage";
+
+/*
+ * Optional styles for demonstration/example usage purposes. Please delete.
+ */
+
+@import "partials/optional";

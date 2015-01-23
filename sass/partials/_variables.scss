@@ -1,0 +1,45 @@
+/*--------------------------------------------------------------
+Variables
+--------------------------------------------------------------*/
+
+/**
+ * Colors
+ */
+
+$brand-color: #1d1d1d;
+
+$color-background-body: #fff;
+$color-background-screen: #f1f1f1;
+$color-background-hr: #ccc;
+$color-background-button: #e6e6e6;
+$color-background-pre: #eee;
+$color-background-ins: #fff9c0;
+
+$color-background-main-menu: #333;
+
+$color-text-screen: #21759b;
+$color-text-input: #666;
+$color-text-input-focus: #111;
+$color-link: royalblue;
+$color-link-hover: midnightblue;
+$color-link-menu: #999;
+$color-link-menu-hover: #000;
+$color-text-main: #404040;
+
+$color-border-button: #ccc #ccc #bbb;
+$color-border-button-hover: #ccc #bbb #aaa;
+$color-border-button-focus: #aaa #bbb #bbb;
+$color-border-input: #ccc;
+$color-border-abbr: #666;
+
+/**
+ * Typography
+ */
+
+$font-sans:  "Open Sans", sans-serif;
+$font-serif: Roboto, Georgia, Times, "Times New Roman", serif;
+$font-code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font-pre: "Courier 10 Pitch", Courier, monospace;
+
+$line-height-body: 1.5;
+$line-height-pre: 1.6;

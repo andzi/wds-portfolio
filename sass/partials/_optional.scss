@@ -1,0 +1,45 @@
+/*--------------------------------------------------------------
+Optional Base Styles
+--------------------------------------------------------------*/
+
+// Structure
+
+.site {
+	position: relative;
+	width: 100%;
+}
+
+#main {
+	max-width: $max-width;
+	margin: 20px auto 20px;
+	overflow: hidden;
+
+	@include wider-than(desktop) {
+		margin: 40px auto 60px;
+	}
+}
+
+#primary {
+	@include span-columns(12);
+}
+
+
+// Navigation
+
+.menu {
+
+	ul {
+
+		li {
+			margin-right: 10px;
+		}
+
+	}
+
+}
+
+// Navigation
+
+.entry-title {
+	@include rem(font-size, 36px);
+}

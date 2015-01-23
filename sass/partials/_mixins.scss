@@ -1,0 +1,107 @@
+/*--------------------------------------------------------------
+  Mixins
+---------------------------------------------------------------*/
+
+/**
+ * REM with PX fallback
+ *
+ * Sample Usage: @include rem(font-size, 16px);
+ * 				 @include rem(margin, 10px 5px 5px 10px);
+ */
+
+@function parseInt($n) {
+	@return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+	$px : ();
+	$rem: ();
+
+	$root: 10;
+
+	@each $value in $values {
+		@if $value == 0 or $value == auto {
+			$px : append($px , $value);
+			$rem: append($rem, $value);
+		}
+
+		@else if type-of($value) == number {
+			$unit: unit($value);
+			$val: parseInt($value);
+
+			@if $unit == "px" {
+				$px : append($px,  $value);
+				$rem: append($rem, ($val / $root + rem));
+			}
+
+			@if $unit == "rem" {
+				$px : append($px,  ($val * $root + px));
+				$rem: append($rem, $value);
+			}
+		}
+
+		@else {
+			$px : append($px,  $value);
+			$rem: append($rem, $value);
+		}
+	}
+
+	@if $px == $rem {
+		#{$property}: $px;
+	} @else {
+		#{$property}: $px;
+		#{$property}: $rem;
+	}
+}
+
+@function rem($value) {
+	$root: $font-size;
+	$val: parseInt($value);
+	$return: ();
+
+	@if unit($value) == "px" {
+		$return: append($return, ($val / $root + rem));
+	} @else {
+		$return: append($return, ($val * $root + px));
+	}
+
+	@return $return;
+}
+
+
+/* Center block */
+
+@mixin center-block {
+	display: block;
+	margin: 0 auto;
+}
+
+
+/**
+ * Media Queries using Sass List Maps
+ *
+ */
+
+/* Define our breakpoints in $breakpoints variable and assign key value pairs in ems.
+ * If default font-size is 16px, then:
+ * large-desktop (71.25em) = 1140px
+ * desktop (48em)= 768px
+ * tablet (30em) = 480px
+ */
+
+$breakpoints: (
+	large-desktop: 71.25em,
+	desktop: 48em,
+	tablet: 30em,
+);
+
+@mixin wider-than($screen-size) {
+	@if map-has-key($breakpoints, $screen-size) {
+		@media (min-width: map-get($breakpoints, $screen-size)) {
+			@content;
+		}
+	} @else {
+		// Debugging - can be used thanks to map-has-key() instead of loop
+		@warn "Breakpoint '#{$screen-size}' does not exist!"
+ 	}
+}

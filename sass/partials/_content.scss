@@ -1,0 +1,264 @@
+/*--------------------------------------------------------------
+Site Content
+--------------------------------------------------------------*/
+
+// Posts and pages
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+	border-bottom: 1px solid #ccc;
+	margin: 0 0 2em;
+	padding: 0 0 2em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.entry-footer{
+	@include rem(font-size, 14px);
+
+	span {
+		display: block;
+	}
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+// Asides
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+// Comments
+
+.comments-area {
+	margin: 48px auto 0;
+	width: 100%;
+}
+
+.comment-reply-title,
+.comments-title {
+	font-weight: 700;
+	line-height: 1.5;
+	letter-spacing: -0.01em;
+	margin: 0;
+	text-transform: uppercase;
+
+	@include rem(font-size, 16px);
+}
+
+.comment-list {
+	list-style: none;
+	margin: 0 0 48px;
+}
+
+.comment-list article, 
+.comment-list .pingback, 
+.comment-list .trackback {
+	border-top: 1px solid #ededed;
+	margin-bottom: 24px;
+	padding-top: 24px;
+}
+
+.comment-list > li:first-child > article, 
+.comment-list > .pingback:first-child, 
+.comment-list > .trackback:first-child {
+	border-top: 0;
+}
+
+.comment-list .reply {
+	margin-top: 24px;
+}
+
+.comment-list .reply a:active {
+	position: relative;
+	bottom: -2px;
+}
+
+.comment-list .children {
+	list-style: none;
+	margin-left: 24px;
+}
+
+.comment-author {
+	padding: 0 0 0 36px;
+	position: relative;
+}
+
+.bypostauthor{}
+
+.comment-author a {
+	color: #23292b;
+}
+
+.comment-author a:hover, 
+.comment-author a:active, 
+.comment-author a:focus {
+	color: #00a1e0;
+}
+
+.comment-author .avatar {
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 24px;
+	width: 24px;
+}
+
+.says {
+	display: none;
+}
+
+.comment-metadata a {
+	font-weight: 400;
+	line-height: 1.23077;
+	color: #aaa;
+	text-transform: uppercase;
+
+	@include rem(font-size, 13px);
+}
+
+.comment-edit-link {
+	margin-left: 10px;
+}
+
+.comment-edit-link:before {
+	content: "\f044";
+	font-family: 'FontAwesome';
+	position: relative;
+	top: 0;
+	margin: 0 4px 0 0;
+}
+
+.comment-content {
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	word-wrap: break-word;
+	margin-top: 24px;
+}
+
+.comment-content ul,
+.comment-content ol {
+	margin: 0 0 24px 22px;
+}
+.comment-content li > ul,
+.comment-content li > ol {
+	margin-bottom: 0;
+}
+
+.comment-content > :last-child {
+	margin-bottom: 0;
+}
+
+.comment .comment-respond {
+	margin-top: 48px;
+}
+
+.comment-respond h3 {
+	margin: 0 0 24px;
+}
+
+.no-comments {
+	font-weight: 700;
+	line-height: 1.5;
+	margin-top: 24px;
+	text-transform: uppercase;
+
+	@include rem(font-size, 16px);
+}
+
+.comment-form label {
+	display: block;
+}
+
+.form-allowed-tags, 
+.form-allowed-tags code {
+	font-weight: 400;
+	line-height: 1.33333;
+
+	@include rem(font-size, 12px);
+}
+
+.comment-reply-title a {
+	float: right;
+	height: 24px;
+	overflow: hidden;
+	width: 24px;
+}
+
+#cancel-comment-reply-link{
+	width: auto;
+}
+
+.comment-navigation {
+	margin-bottom: 48px;
+}
+
+.comment-navigation a {
+	font-weight: 400;
+	line-height: 1.14286;
+	text-transform: uppercase;
+
+	@include rem(font-size, 14px);
+}
+
+.comment-navigation .nav-next, 
+.comment-navigation .nav-previous {
+	display: inline-block;
+}
+
+.comment-navigation .nav-previous a {
+	margin-right: 10px;
+}
+
+#comment-nav-above {
+	margin: 36px 0 24px;
+}
+
+// Footer
+
+#colophon {
+	background: $brand-color;
+	clear: left;
+	color: #fff;
+	font-weight: 300;
+	display: block;
+	padding: 3em 0;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+
+	@include rem(font-size, 15px);
+
+	a {
+		color: #999;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+}
