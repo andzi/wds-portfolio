@@ -16,7 +16,6 @@ Optional Base Styles
 	padding: 0 20px;
 
 	@include wider-than(desktop) {
-		margin: 40px auto 20px;
 		padding: 0;
 	}
 }

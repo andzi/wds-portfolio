@@ -764,7 +764,7 @@ a:active
 
 /* line 16, sass/partials/_navigation.scss */
 
-.navigation-main
+.main-navigation
 {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
@@ -782,7 +782,7 @@ a:active
 
 /* line 27, sass/partials/_navigation.scss */
 
-.navigation-main ul
+.main-navigation ul
 {
     margin: 0;
     padding-left: 0;
@@ -790,247 +790,79 @@ a:active
     list-style: none;
 }
 
-/* line 33, sass/partials/_navigation.scss */
+/* line 32, sass/partials/_navigation.scss */
 
-.navigation-main li
+.main-navigation ul ul
 {
-    position: relative;
+    position: absolute;
+    z-index: 99999;
+    top: 1.5em;
+    left: -999em;
 
     float: left;
 
-    margin-right: 20px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
 }
 
-/* line 39, sass/partials/_navigation.scss */
+/* line 40, sass/partials/_navigation.scss */
 
-.navigation-main li:last-child
+.main-navigation ul ul ul
 {
-    position: relative;
-
-    display: inline-block;
-
-    margin-right: 0;
+    top: 0;
+    left: -999em;
 }
 
-/* line 45, sass/partials/_navigation.scss */
+/* line 46, sass/partials/_navigation.scss */
 
-.navigation-main a
+.main-navigation ul ul li:hover > ul
 {
-    display: block;
-
-    text-decoration: none;
-
-    color: #999;
+    left: 100%;
 }
 
 /* line 51, sass/partials/_navigation.scss */
 
-.navigation-main a:hover
-{
-    color: #000;
-}
-
-/* line 55, sass/partials/_navigation.scss */
-
-.navigation-main ul ul
-{
-    position: absolute;
-    z-index: 99999;
-    z-index: 99999;
-    top: 1.5em;
-    left: 0;
-
-    display: none;
-    visibility: hidden;
-    float: left;
-
-    transition: all .3s ease-in-out;
-
-    background: #1d1d1d;
-}
-
-/* line 70, sass/partials/_navigation.scss */
-
-.navigation-main ul li:hover > ul
-{
-    display: block;
-    visibility: visible;
-
-    transition: all .3s ease-in-out;
-
-    opacity: 1;
-}
-
-/* line 79, sass/partials/_navigation.scss */
-
-.navigation-main ul ul ul
-{
-    top: 0;
-    left: 100%;
-}
-
-/* line 84, sass/partials/_navigation.scss */
-
-.navigation-main ul ul a
+.main-navigation ul ul a
 {
     width: 200px;
-    padding: 10px 15px;
-
-    background: #1d1d1d;
 }
 
-/* line 90, sass/partials/_navigation.scss */
+/* line 62, sass/partials/_navigation.scss */
 
-.navigation-main ul ul li
+.main-navigation ul li:hover > ul
 {
-    margin-left: 0;
+    left: auto;
 }
 
-/* line 94, sass/partials/_navigation.scss */
+/* line 66, sass/partials/_navigation.scss */
 
-.navigation-main li:hover > a
+.main-navigation li
 {
-    color: #000;
-}
-
-/* line 98, sass/partials/_navigation.scss */
-
-.navigation-main ul li:hover > ul
-{
-    display: block;
-}
-
-/* line 102, sass/partials/_navigation.scss */
-
-.navigation-main li.current_page_item a,
-.navigation-main li.current-menu-item a
-{
-    color: #999;
-}
-
-/* line 107, sass/partials/_navigation.scss */
-
-.navigation-main li.current_page_item ul li a,
-.navigation-main li.current-menu-item ul li a
-{
-    color: #999;
-}
-
-/* line 112, sass/partials/_navigation.scss */
-
-.navigation-main li.current_page_item ul li a:hover,
-.navigation-main li.current-menu-item ul li a:hover
-{
-    color: #000;
-}
-
-/* line 119, sass/partials/_navigation.scss */
-
-.menu-toggle
-{
-    display: none;
-}
-
-/* line 123, sass/partials/_navigation.scss */
-
-.main-small-navigation .menu
-{
-    display: none;
-}
-
-/* line 127, sass/partials/_navigation.scss */
-
-.menu-toggle
-{
-    font-family: 'open sans', helvetica, arial;
-    font-size: 12px;
-    font-size: 1.2rem;
-    font-weight: 300;
+    position: relative;
 
     float: left;
 
-    width: auto;
-
-    cursor: pointer;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-
-    color: #999;
+    margin-left: 14px;
 }
 
-/* line 140, sass/partials/_navigation.scss */
+/* line 74, sass/partials/_navigation.scss */
 
-.toggled-on
-{
-    margin: 0;
-    padding: 18px 0 0 0;
-}
-
-/* line 145, sass/partials/_navigation.scss */
-
-.main-small-navigation
-{
-    font-family: 'open sans', helvetica, arial;
-    font-size: 12px;
-    font-size: 1.2rem;
-    font-weight: 300;
-
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-/* line 154, sass/partials/_navigation.scss */
-
-.main-small-navigation a
+.main-navigation a
 {
     display: block;
 
-    color: #fff;
+    text-decoration: none;
 }
 
-/* line 159, sass/partials/_navigation.scss */
+/* Small menu. */
 
-.main-small-navigation a:hover
-{
-    color: #999;
-}
+/* line 81, sass/partials/_navigation.scss */
 
-/* line 163, sass/partials/_navigation.scss */
-
-.main-small-navigation ul
+.menu-toggle
 {
     display: none;
-    clear: left;
-
-    margin-left: 0;
-
-    list-style: none;
 }
 
-/* line 170, sass/partials/_navigation.scss */
-
-.main-small-navigation ul > li
-{
-    padding: 8px 0;
-
-    border-top: 1px solid rgba(0, 0, 0, .1);
-}
-
-/* line 175, sass/partials/_navigation.scss */
-
-.main-small-navigation ul ul > li:first-child
-{
-    margin-top: 8px;
-}
-
-/* line 179, sass/partials/_navigation.scss */
-
-.main-small-navigation ul > li:last-child
-{
-    padding-bottom: 0;
-}
-
-/* line 195, sass/partials/_navigation.scss */
+/* line 97, sass/partials/_navigation.scss */
 
 .nav-links
 {
@@ -1043,7 +875,7 @@ a:active
     margin: 0;
 }
 
-/* line 202, sass/partials/_navigation.scss */
+/* line 104, sass/partials/_navigation.scss */
 
 .nav-links .nav-previous
 {
@@ -1052,7 +884,7 @@ a:active
     width: 50%;
 }
 
-/* line 207, sass/partials/_navigation.scss */
+/* line 109, sass/partials/_navigation.scss */
 
 .nav-links .nav-next
 {
@@ -1811,52 +1643,46 @@ Galleries
     display: block;
 }
 
-/* line 3, sass/partials/_header.scss */
+/* line 2, sass/partials/_header.scss */
 
-.logo-wrapper
-{
-    overflow: hidden;
-
-    width: 100%;
-    padding: 20px;
-}
-
-/* line 14, sass/partials/_header.scss */
-
-.site-branding
+#masthead
 {
     position: relative;
 
     max-width: 68.75em;
     margin: 0 auto;
-    padding: 0;
+    padding: 10px 0;
 }
 
-/* line 21, sass/partials/_header.scss */
+/* line 8, sass/partials/_header.scss */
 
-.site-title
+#masthead .site-branding
+{
+    display: block;
+    float: left;
+
+    text-transform: uppercase;
+}
+
+/* line 13, sass/partials/_header.scss */
+
+#masthead .site-branding .site-title
 {
     font-family: 'open sans', helvetica, arial;
     font-size: 30px;
     font-weight: 700;
-
-    display: block;
-    float: left;
-
-    text-align: center;
-    text-transform: uppercase;
 }
 
-/* line 30, sass/partials/_header.scss */
+/* line 19, sass/partials/_header.scss */
 
-.site-title a
+#masthead .site-branding a
 {
     color: #1d1d1d;
 }
 
-/* line 33, sass/partials/_header.scss */
+/* line 22, sass/partials/_header.scss */
 
-.site-title a:hover
+#masthead .site-branding a:hover
 {
     color: #999;
 }
@@ -2001,7 +1827,7 @@ Optional Base Styles
     padding: 0 20px;
 }
 
-/* line 24, sass/partials/_optional.scss */
+/* line 23, sass/partials/_optional.scss */
 
 #primary
 {
@@ -2019,14 +1845,14 @@ Optional Base Styles
     margin-right: 0;
 }
 
-/* line 35, sass/partials/_optional.scss */
+/* line 34, sass/partials/_optional.scss */
 
 .menu ul li
 {
     margin-right: 10px;
 }
 
-/* line 45, sass/partials/_optional.scss */
+/* line 44, sass/partials/_optional.scss */
 
 .entry-title
 {
@@ -2036,6 +1862,13 @@ Optional Base Styles
 
 @media screen and (min-width: 480px)
 {
+    /* line 2, sass/partials/_header.scss */
+
+    #masthead
+    {
+        padding: 10px;
+    }
+
     /* line 57, sass/partials/_homepage.scss */
 
     .page-template-homepage-template-php .type-jetpack-portfolio
@@ -2047,12 +1880,11 @@ Optional Base Styles
 
 @media screen and (min-width: 768px)
 {
-    /* line 3, sass/partials/_header.scss */
+    /* line 2, sass/partials/_header.scss */
 
-    .logo-wrapper
+    #masthead
     {
-        margin: 40px auto 20px;
-        padding: 20px 0;
+        padding: 10px 0;
     }
 
     /* line 4, sass/partials/_homepage.scss */
@@ -2076,7 +1908,6 @@ Optional Base Styles
 
     #main
     {
-        margin: 40px auto 20px;
         padding: 0;
     }
 }
@@ -2091,20 +1922,19 @@ Optional Base Styles
     }
 }
 
-@media (max-width: 700px)
+@media screen and (max-width: 600px)
 {
-    /* line 184, sass/partials/_navigation.scss */
+    /* line 86, sass/partials/_navigation.scss */
 
     .menu-toggle,
-    .main-small-navigation ul.nav-menu.toggled-on,
-    .main-small-navigation ul ul
+    .main-navigation.toggled .nav-menu
     {
         display: block;
     }
 
-    /* line 189, sass/partials/_navigation.scss */
+    /* line 91, sass/partials/_navigation.scss */
 
-    .navigation-main ul
+    .main-navigation ul
     {
         display: none;
     }

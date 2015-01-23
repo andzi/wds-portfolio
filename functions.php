@@ -9,14 +9,14 @@
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 1100; /* pixels */
+	$content_width = 640; /* pixels */
 }
 
 if ( ! function_exists( 'wds_portfolio_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
- * Note that this function is hooked into the afterwds_portfolioetup_theme hook, which
+ * Note that this function is hooked into the after_setup_theme hook, which
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
@@ -76,22 +76,86 @@ function wds_portfolio_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
-
-	// Add styles to the post editor
-	add_editor_style( array( 'editor-style.css', wds_portfolio_font_url() ) );
-	add_editor_style( array( 'editor-style.css', wds_portfolio_font_url() ) );
-
-	/*
-	 * Adding theme support for Jetpack Portfolio CPT.
-	 * Not essential to add this but this does few nice things.
-	 * 1. Turns the CPT on when the theme is activated.
-	 * 2. Displays an admin notice if the option is turned off, but the theme is activated.
-	 * 3. When the theme is switched away, if no CPTs are populated, it turns it back off.
-	 */
-	add_theme_support( 'jetpack-portfolio' );
 }
 endif; // wds_portfolio_setup
 add_action( 'after_setup_theme', 'wds_portfolio_setup' );
+
+/**
+ * Register widget area.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+ */
+function wds_portfolio_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Sidebar', 'wds_portfolio' ),
+		'id'            => 'sidebar-1',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+}
+add_action( 'widgets_init', 'wds_portfolio_widgets_init' );
+
+/**
+ * Enqueue scripts and styles.
+ */
+function wds_portfolio_scripts() {
+	wp_enqueue_style( 'wds_portfolio-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'wds_portfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+
+	wp_enqueue_script( 'wds_portfolio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
+	if ( is_page_template( 'homepage-template.php' ) ) {
+		wp_enqueue_script( 'wds-portfolio-isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array( 'jquery' ), '012315', true );
+
+		wp_enqueue_script( 'wds-portfolio', get_template_directory_uri() . '/js/wds-portfolio.js', array( 'jquery' ), '012315', true );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'wds_portfolio_scripts' );
+
+/**
+ * Register Google font.
+ */
+function wds_portfolio_font_url() {
+
+	$fonts_url = '';
+
+	/*
+	* Translators: If there are characters in your language that are not
+	* supported by the following, translate this to 'off'. Do not translate
+	* into your own language.
+	*/
+	$roboto = _x( 'on', 'Roboto font: on or off', 'wds_portfolio' );
+	$open_sans = _x( 'on', 'Open Sans font: on or off', 'wds_portfolio' );
+
+	if ( 'off' !== $roboto || 'off' !== $open_sans ) {
+		$font_families = array();
+
+		if ( 'off' !== $roboto ) {
+			$font_families[] = 'Roboto:400,700';
+		}
+
+		if ( 'off' !== $open_sans ) {
+			$font_families[] = 'Open Sans:400,300,700';
+		}
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+	}
+
+	return $fonts_url;
+}
 
 /**
  * Implement the Custom Header feature.
@@ -117,8 +181,3 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-/**
- * Load styles and scripts
- */
-require get_template_directory() . '/inc/scripts.php';
