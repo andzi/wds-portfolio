@@ -1,9 +1,14 @@
 // Header
 
 .logo-wrapper{
-	padding: 20px 0;
+	padding: 20px;
 	overflow: hidden;
 	width: 100%;
+
+	@include wider-than(desktop) {
+		margin: 40px auto 20px;
+		padding: 20px 0;
+	}
 }
 
 .site-branding{

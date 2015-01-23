@@ -90,18 +90,6 @@ Variables
 
 /* Center block */
 
-/**
- * Media Queries using Sass List Maps
- *
- */
-
-/* Define our breakpoints in $breakpoints variable and assign key value pairs in ems.
- * If default font-size is 16px, then:
- * large-desktop (71.25em) = 1140px
- * desktop (48em)= 768px
- * tablet (30em) = 480px
- */
-
 /*--------------------------------------------------------------
 Reset
 --------------------------------------------------------------*/
@@ -1830,10 +1818,10 @@ Galleries
     overflow: hidden;
 
     width: 100%;
-    padding: 20px 0;
+    padding: 20px;
 }
 
-/* line 9, sass/partials/_header.scss */
+/* line 14, sass/partials/_header.scss */
 
 .site-branding
 {
@@ -1844,7 +1832,7 @@ Galleries
     padding: 0;
 }
 
-/* line 16, sass/partials/_header.scss */
+/* line 21, sass/partials/_header.scss */
 
 .site-title
 {
@@ -1859,14 +1847,14 @@ Galleries
     text-transform: uppercase;
 }
 
-/* line 25, sass/partials/_header.scss */
+/* line 30, sass/partials/_header.scss */
 
 .site-title a
 {
     color: #1d1d1d;
 }
 
-/* line 28, sass/partials/_header.scss */
+/* line 33, sass/partials/_header.scss */
 
 .site-title a:hover
 {
@@ -1877,14 +1865,14 @@ Galleries
 
 .page-template-homepage-template-php .page-title
 {
-    font-size: 48px;
-    font-size: 4.8rem;
+    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: 400;
 
     text-align: center;
 }
 
-/* line 11, sass/partials/_homepage.scss */
+/* line 15, sass/partials/_homepage.scss */
 
 .page-template-homepage-template-php .page-content
 {
@@ -1895,7 +1883,7 @@ Galleries
     text-align: center;
 }
 
-/* line 17, sass/partials/_homepage.scss */
+/* line 21, sass/partials/_homepage.scss */
 
 .page-template-homepage-template-php .hentry
 {
@@ -1903,14 +1891,14 @@ Galleries
     padding: 0;
 }
 
-/* line 22, sass/partials/_homepage.scss */
+/* line 26, sass/partials/_homepage.scss */
 
 .page-template-homepage-template-php .portfolio-filter
 {
     overflow: hidden;
 }
 
-/* line 25, sass/partials/_homepage.scss */
+/* line 29, sass/partials/_homepage.scss */
 
 .page-template-homepage-template-php .portfolio-filter ul
 {
@@ -1921,13 +1909,13 @@ Galleries
     text-align: center;
 }
 
-/* line 31, sass/partials/_homepage.scss */
+/* line 35, sass/partials/_homepage.scss */
 
 .page-template-homepage-template-php .portfolio-filter ul li
 {
     display: inline-block;
 
-    margin-right: 1em;
+    margin: 0 1em 1em 0;
     padding: .2em .5em;
 
     list-style-type: none;
@@ -1939,14 +1927,14 @@ Galleries
     background: #f0f0f0;
 }
 
-/* line 41, sass/partials/_homepage.scss */
+/* line 45, sass/partials/_homepage.scss */
 
 .page-template-homepage-template-php .portfolio-filter ul li:last-child
 {
     margin-right: 0;
 }
 
-/* line 45, sass/partials/_homepage.scss */
+/* line 49, sass/partials/_homepage.scss */
 
 .page-template-homepage-template-php .portfolio-filter ul li:focus,
 .page-template-homepage-template-php .portfolio-filter ul li:hover
@@ -1954,26 +1942,25 @@ Galleries
     color: #000;
 }
 
-/* line 53, sass/partials/_homepage.scss */
+/* line 57, sass/partials/_homepage.scss */
 
 .page-template-homepage-template-php .type-jetpack-portfolio
 {
     float: left;
 
     width: 100%;
+    min-height: 219px;
     margin: 0 -1px -1px 0;
-
-    background: #000;
 }
 
-/* line 72, sass/partials/_homepage.scss */
+/* line 77, sass/partials/_homepage.scss */
 
 .page-template-homepage-template-php .type-jetpack-portfolio img
 {
     display: block;
 }
 
-/* line 76, sass/partials/_homepage.scss */
+/* line 81, sass/partials/_homepage.scss */
 
 .page-template-homepage-template-php .type-jetpack-portfolio:hover
 {
@@ -2010,10 +1997,11 @@ Optional Base Styles
     overflow: hidden;
 
     max-width: 68.75em;
-    margin: 20px auto 20px;
+    margin: 40px auto 60px;
+    padding: 0 20px;
 }
 
-/* line 22, sass/partials/_optional.scss */
+/* line 24, sass/partials/_optional.scss */
 
 #primary
 {
@@ -2031,14 +2019,14 @@ Optional Base Styles
     margin-right: 0;
 }
 
-/* line 33, sass/partials/_optional.scss */
+/* line 35, sass/partials/_optional.scss */
 
 .menu ul li
 {
     margin-right: 10px;
 }
 
-/* line 43, sass/partials/_optional.scss */
+/* line 45, sass/partials/_optional.scss */
 
 .entry-title
 {
@@ -2046,19 +2034,36 @@ Optional Base Styles
     font-size: 3.6rem;
 }
 
-@media (min-width: 30em)
+@media screen and (min-width: 480px)
 {
-    /* line 53, sass/partials/_homepage.scss */
+    /* line 57, sass/partials/_homepage.scss */
 
     .page-template-homepage-template-php .type-jetpack-portfolio
     {
         width: 50%;
+        min-height: inherit;
     }
 }
 
-@media (min-width: 48em)
+@media screen and (min-width: 768px)
 {
-    /* line 53, sass/partials/_homepage.scss */
+    /* line 3, sass/partials/_header.scss */
+
+    .logo-wrapper
+    {
+        margin: 40px auto 20px;
+        padding: 20px 0;
+    }
+
+    /* line 4, sass/partials/_homepage.scss */
+
+    .page-template-homepage-template-php .page-title
+    {
+        font-size: 48px;
+        font-size: 4.8rem;
+    }
+
+    /* line 57, sass/partials/_homepage.scss */
 
     .page-template-homepage-template-php .type-jetpack-portfolio
     {
@@ -2071,13 +2076,14 @@ Optional Base Styles
 
     #main
     {
-        margin: 40px auto 60px;
+        margin: 40px auto 20px;
+        padding: 0;
     }
 }
 
-@media (min-width: 71.25em)
+@media screen and (min-width: 1000px)
 {
-    /* line 53, sass/partials/_homepage.scss */
+    /* line 57, sass/partials/_homepage.scss */
 
     .page-template-homepage-template-php .type-jetpack-portfolio
     {

@@ -5,7 +5,11 @@
 		font-weight: 400;
 		text-align: center;
 
-		@include rem(font-size, 48px);
+		@include rem(font-size, 32px);
+
+		@include wider-than(desktop) {
+			@include rem(font-size, 48px);
+		}
 	}
 
 	.page-content {
@@ -35,7 +39,7 @@
 				display: inline-block;
 				list-style-type: none;
 				text-align: center;
-				margin-right: 1em;
+				margin: 0 1em 1em 0;
 				padding: .2em .5em;
 
 				&:last-child {
@@ -51,13 +55,14 @@
 	}
 
 	.type-jetpack-portfolio{
-		background: #000;
 		float: left;
 		margin: 0 -1px -1px 0;
+		min-height: 219px;
 		width: 100%;
 
 		@include wider-than(tablet) {
 			width: 50%;
+			min-height: inherit;
 		}
 
 		@include wider-than(desktop) {

@@ -77,31 +77,27 @@
 }
 
 
-/**
- * Media Queries using Sass List Maps
- *
- */
+// Media Queries
+// ----------------------------------
+@mixin wider-than($point) {
 
-/* Define our breakpoints in $breakpoints variable and assign key value pairs in ems.
- * If default font-size is 16px, then:
- * large-desktop (71.25em) = 1140px
- * desktop (48em)= 768px
- * tablet (30em) = 480px
- */
+    @if $point == xlarge-desktop {
+        @media screen and (min-width: 1400px) { @content; } // 1400px
+    }
 
-$breakpoints: (
-	large-desktop: 71.25em,
-	desktop: 48em,
-	tablet: 30em,
-);
+	@else if $point == large-desktop {
+		@media screen and (min-width: 1000px) { @content; } // 1000px
+	}
 
-@mixin wider-than($screen-size) {
-	@if map-has-key($breakpoints, $screen-size) {
-		@media (min-width: map-get($breakpoints, $screen-size)) {
-			@content;
-		}
-	} @else {
-		// Debugging - can be used thanks to map-has-key() instead of loop
-		@warn "Breakpoint '#{$screen-size}' does not exist!"
- 	}
+	@else if $point == desktop {
+		@media screen and (min-width: 768px) { @content; } // 768px
+	}
+
+	@else if $point == tablet {
+		@media screen and (min-width: 480px) { @content; } // 480px
+	}
+
+	@else {
+		@media screen and (min-width: $point) { @content; }
+	}
 }
