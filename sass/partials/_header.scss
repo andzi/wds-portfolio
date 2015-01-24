@@ -2,19 +2,22 @@
 #masthead {
 	max-width: $max-width;
 	margin: 0 auto;
-	padding: 10px 0;
 	position: relative;
 
 	.site-branding{
 		display: block;
 		float: left;
 		text-transform: uppercase;
+	}
 
-		.site-title {
-			font-family: 'open sans', helvetica, arial;
-			font-size: 30px;
-			font-weight: 700;
-		}
+	.site-title {
+		font-family: $font-sans;
+		font-size: 30px;
+		font-weight: 800;
+		line-height: 1.26316;
+		letter-spacing: -0.01em;
+		margin: 0;
+		padding: 10px 0;
 
 		a {
 			color: $brand-color;

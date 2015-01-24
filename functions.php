@@ -9,7 +9,7 @@
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 1100; /* pixels */
+	$content_width = 1169; /* pixels */
 }
 
 if ( ! function_exists( 'wds_portfolio_setup' ) ) :
@@ -143,7 +143,7 @@ function wds_portfolio_font_url() {
 		}
 
 		if ( 'off' !== $open_sans ) {
-			$font_families[] = 'Open Sans:400,300,700';
+			$font_families[] = 'Open Sans:300,700,800';
 		}
 
 		$query_args = array(

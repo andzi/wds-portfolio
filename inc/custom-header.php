@@ -22,7 +22,7 @@ function wds_portfolio_custom_header_setup() {
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1440,
-		'height'                 => 630,
+		'height'                 => 447,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'wds_portfolio_header_style',
 		'admin-head-callback'    => 'wds_portfolio_admin_header_style',

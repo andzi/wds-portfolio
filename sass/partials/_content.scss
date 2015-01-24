@@ -9,7 +9,7 @@ Site Content
 }
 
 .hentry {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #eee;
 	margin: 0 0 2em;
 	padding: 0 0 2em;
 }
@@ -30,8 +30,28 @@ Site Content
 	margin: 1.5em 0 0;
 }
 
+.entry-title {
+	font-family: $font-sans;
+	font-weight: 800;
+	text-transform: uppercase;
+
+	a {
+		color: #000;
+
+		&:hover {
+			color: #999;
+		}
+	}
+}
+
+.entry-meta {
+	margin-bottom: 10px;
+	text-transform: uppercase;
+
+	@include rem(font-size, 12px);
+}
 .entry-footer{
-	@include rem(font-size, 14px);
+	@include rem(font-size, 12px);
 
 	span {
 		display: block;
@@ -247,12 +267,13 @@ Site Content
 	color: #fff;
 	font-weight: 300;
 	display: block;
+	letter-spacing: 1px;
 	padding: 3em 0;
 	text-align: center;
 	text-transform: uppercase;
 	width: 100%;
 
-	@include rem(font-size, 15px);
+	@include rem(font-size, 13px);
 
 	a {
 		color: #999;
