@@ -37,15 +37,10 @@ and Blueprint http://www.blueprintcss.org/
 @import "partials/accessibility";
 @import "partials/alignments";
 @import "partials/clearings";
+@import "partials/container";
 @import "partials/widgets";
 @import "partials/content";
 @import "partials/infinite-scroll";
 @import "partials/media";
 @import "partials/header";
 @import "partials/homepage";
-
-/*
- * Optional styles for demonstration/example usage purposes. Please delete.
- */
-
-@import "partials/optional";

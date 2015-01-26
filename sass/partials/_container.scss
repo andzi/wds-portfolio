@@ -1,0 +1,19 @@
+// Container Styles
+.site {
+	position: relative;
+	width: 100%;
+}
+
+#main {
+	max-width: $max-width;
+	margin: 40px auto 60px;
+	padding: 0 20px;
+
+	@include wider-than(desktop) {
+		padding: 0;
+	}
+}
+
+#primary {
+	@include span-columns(12);
+}

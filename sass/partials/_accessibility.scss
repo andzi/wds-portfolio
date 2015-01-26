@@ -1,8 +1,6 @@
-/*--------------------------------------------------------------
-Accessibility
---------------------------------------------------------------*/
+// Accessibility
 
-/* Text meant only for screen readers */
+// Text meant only for screen readers
 
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
@@ -29,6 +27,6 @@ Accessibility
 		text-decoration: none;
 		top: 5px;
 		width: auto;
-		z-index: 100000; /* Above WP toolbar */
+		z-index: 100000;
 	}
 }

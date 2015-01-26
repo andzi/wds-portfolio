@@ -58,10 +58,7 @@ h6 {
 	line-height: 1.4782608695;
 }
 
-/**
- * Copy
- */
-
+// copy
 p {
 	margin-bottom: 24px;
 }
@@ -89,20 +86,20 @@ address {
 pre {
 	background: $color-background-pre;
 	font-family: $font-pre;
-	@include rem(font-size, 15px);
 	line-height: $line-height-pre;
 	margin-bottom: 1.6em;
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
+	@include rem(font-size, 15px);
 }
 
 code,
 kbd,
 tt,
 var {
-	@include rem(font-size, 15px);
 	font-family: $font-code;
+	@include rem(font-size, 15px);
 }
 
 abbr,

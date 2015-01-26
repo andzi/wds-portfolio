@@ -19,87 +19,78 @@ a {
 	}
 }
 
-// Main Menu
+// Main Menu top level
 .main-navigation {
 	float: right;
 	max-width: 500px;
 	font-family: $font-sans;
-	font-weight: 600;
+	font-weight: 400;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	padding: 10px 0 0;
-	@include rem(font-size, 13px);
-
+	padding: 18px 0 0;
+	@include rem(font-size, 14px);
+ 
 	ul {
-		display: inline-block;
 		list-style: none;
 		margin: 0;
-		padding: 12px 0;
-
-		ul {
-			background: white;
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			line-height: 2;
-			padding: 12px 4px;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				padding: 0;
-				width: 200px;
-			}
-
-			&:hover > a {
-			}
-
-			a:hover {
-			}
-		}
-
+		padding-left: 0;
+ 
 		li:hover > ul {
 			left: auto;
 		}
 	}
+ 
 	li {
 		float: left;
 		margin-left: 14px;
 		position: relative;
-
-		&:hover > a {
-		}
 	}
+	
 	a {
-		color: rgba(0, 0, 0, .5);
 		display: block;
 		text-decoration: none;
-
-		&:hover {
-			color: rgba(0, 0, 0, 1);
+	}
+}
+ 
+// Main Menu second level
+.main-navigation {
+ 
+	ul ul {
+		background: #fff;
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+		float: left;
+		padding: 14px 8px 8px;
+		position: absolute;
+		top: 1.5em;
+		left: -999em;
+		z-index: 99999;
+ 
+		ul {
+			left: -999em;
+			top: 0;
+		}
+ 
+		li {
+ 
+			&:hover > ul {
+				left: 100%;
+			}
+		}
+ 
+		a {
+			width: 200px;
 		}
 	}
 }
 
-/* Small menu. */
+// Small menu
 .menu-toggle {
 	display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media (tablet) {
 	.menu-toggle {
+		background: #333;
 		display: block;
 		letter-spacing: 1px;
 		margin: 0 auto;
@@ -120,6 +111,7 @@ a {
 		float: none;
 		margin-left: auto;
 		margin-right: auto;
+		padding: 10px;
 		position: absolute;
  		left: 0;
     	right: 0;
@@ -131,6 +123,10 @@ a {
 
 		a {
 			color: #fff;
+
+			&:hover {
+				color: #ddd;
+			}
 		}
 	}
 
@@ -152,8 +148,7 @@ a {
 	margin: 0;
 	overflow: hidden;
 	text-transform: uppercase;
-
-	@include rem(font-size, 12px);
+	@include rem(font-size, 13px);
 
 	.nav-previous {
 		float: left;

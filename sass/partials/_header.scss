@@ -4,46 +4,46 @@
 	margin: 0 auto;
 	position: relative;
 
-	.site-branding{
-		text-align: center;
-		text-transform: uppercase;
-
-		@include wider-than(tablet) {
-			display: block;
-			float: none;
-		}
-
-		@include wider-than(desktop) {
-			display: block;
-			float: left;
-			text-align: left;
-		}
-	}
-
-	.site-title {
-		font-family: $font-sans;
-		font-size: 30px;
-		font-weight: 800;
-		line-height: 1.26316;
-		letter-spacing: -0.01em;
-		margin: 0;
-		padding: 10px 0;
-
-		a {
-			color: $brand-color;
-
-			&:hover {
-				color: #999;
-			}
-		}
-	}
-
 	@include wider-than(tablet) {
 		padding: 10px;
 	}
 
 	@include wider-than(desktop) {
 		padding: 10px 0;
+	}
+}
+
+.site-branding{
+	text-transform: uppercase;
+
+	@include breakpoint(tablet) {
+		display: block;
+		float: none;
+		text-align: center;
+	}
+
+	@include wider-than(large-desktop) {
+		display: block;
+		float: left;
+		text-align: left;
+	}
+}
+
+.site-title {
+	font-family: $font-sans;
+	font-size: 30px;
+	font-weight: 800;
+	line-height: 1.26316;
+	letter-spacing: -0.01em;
+	margin: 0;
+	padding: 10px 0;
+
+	a {
+		color: $brand-color;
+
+		&:hover {
+			color: #999;
+		}
 	}
 }
 

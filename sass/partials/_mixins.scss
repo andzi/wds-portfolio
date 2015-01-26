@@ -1,6 +1,4 @@
-/*--------------------------------------------------------------
-  Mixins
----------------------------------------------------------------*/
+// Mixins
 
 /**
  * REM with PX fallback
@@ -69,8 +67,7 @@
 }
 
 
-/* Center block */
-
+// Center block
 @mixin center-block {
 	display: block;
 	margin: 0 auto;
@@ -78,7 +75,6 @@
 
 
 // Media Queries
-// ----------------------------------
 @mixin wider-than($point) {
 
     @if $point == xlarge-desktop {

@@ -5,7 +5,6 @@
 		color: #382400;
 		font-weight: 100;
 		text-align: center;
-
 		@include rem(font-size, 32px);
 
 		@include wider-than(desktop) {
@@ -14,66 +13,63 @@
 	}
 
 	.page-content {
-		@include rem(font-size, 16px);
-		font-weight: 300;
 		text-align: center;
+		@include rem(font-size, 16px);
 	}
 
 	.hentry {
 		margin: 0;
 		padding: 0;
 	}
+}
 
-	.portfolio-filter {
-		overflow: hidden;
-		text-transform: uppercase;
-		@include rem(font-size, 14px);
+.portfolio-filter {
+	overflow: hidden;
+	text-transform: uppercase;
+	@include rem(font-size, 14px);
 
-		ul {
-			margin: 0 0 2em;
-			padding: 0;
+	ul {
+		margin: 0 0 2em;
+		padding: 0;
+		text-align: center;
+		width: 100%;
+
+		li {
+			background: #f0f0f0;
+			color: #999;
+			cursor: pointer;
+			display: inline-block;
+			list-style-type: none;
 			text-align: center;
-			width: 100%;
+			margin: 0 1em 1em 0;
+			padding: .2em .5em;
 
-			li {
-				background: #f0f0f0;
-				color: #999;
-				cursor: pointer;
-				display: inline-block;
-				list-style-type: none;
-				text-align: center;
-				margin: 0 1em 1em 0;
-				padding: .2em .5em;
+			&:first-child {
+				margin-right: .8em;
+			}
 
-				&:first-child {
-					margin-right: .8em;
-				}
-
-				&:focus,
-				&:hover {
-					color: #000;
-				}
+			&:focus,
+			&:hover {
+				color: #000;
 			}
 		}
 	}
+}
 
+.portfolio {
 	.type-jetpack-portfolio{
 		float: left;
 		margin: 0 -1px -1px 0;
 		width: 100%;
 
 		@include wider-than(tablet) {
-			width: 50%;
+			max-width: 100%;
 			min-height: inherit;
 		}
 
 		@include wider-than(desktop) {
-			width: 33%;
-			cursor: pointer;
-		}
-
-		@include wider-than(large-desktop) {
-			width: 25%;
+			max-width: 239px;
+			max-height: 180px;
 		}
 
 		img {

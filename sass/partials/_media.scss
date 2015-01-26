@@ -1,7 +1,4 @@
-/*--------------------------------------------------------------
-Media
---------------------------------------------------------------*/
-
+// Media
 .page-content,
 .entry-content,
 .comment-content {
@@ -14,9 +11,7 @@ Media
 	}
 }
 
-/* Make sure embeds and iframes fit their containers */
-
-// Misc
+// Make sure embeds and iframes fit their containers
 
 audio,
 canvas,
@@ -28,7 +23,6 @@ video {
 }
 
 // Images
-
 .header-img img {
 	width: 100%;
 	height: auto;
@@ -43,10 +37,7 @@ video {
 	margin-bottom: 1.5em;
 }
 
-/*--------------------------------------------------------------
-Captions
---------------------------------------------------------------*/
-
+// Captions
 .wp-caption {
 	margin-bottom: 1.5em;
 	max-width: 100%;
@@ -65,10 +56,7 @@ Captions
 	text-align: center;
 }
 
-/*--------------------------------------------------------------
-Galleries
---------------------------------------------------------------*/
-
+// Galleries
 .gallery {
 	margin-bottom: 1.5em;
 }
