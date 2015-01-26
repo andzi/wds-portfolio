@@ -23,45 +23,39 @@ h5,
 h6 {
 	clear: both;
 	font-family: $font-sans;
+	margin-bottom: 16px;
 }
 
 h1 {
-	font-size: 22px;
-	font-weight: 700;
+	font-size: 34px;
+	font-weight: 800;
 	line-height: 1.09091;
+	text-transform: uppercase;
 }
 
 h2 {
-	font-size: 20px;
-	font-weight: 700;
-	line-height: 1.2;
+	font-size: 30px;
+	line-height: 1.1333333333;
 }
 
 h3 {
-	font-size: 18px;
-	font-weight: 700;
-	line-height: 1.33333;
+	font-size: 28px;
+	line-height: 1.2142857142;
 }
 
 h4 {
-	font-size: 16px;
-	font-weight: 700;
-	line-height: 2.25;
-	text-transform: uppercase;
+	font-size: 26px;
+	line-height: 1.3076923076;
 }
 
 h5 {
-	font-size: 16px;
-	font-weight: 700;
-	line-height: 2.25;
-	text-transform: uppercase;
+	font-size: 24px;
+	line-height: 1.4166666666;
 }
 
 h6 {
-	font-size: 14px;
-	font-weight: 700;
-	line-height: 2.57143;
-	text-transform: uppercase;
+	font-size: 23px;
+	line-height: 1.4782608695;
 }
 
 /**

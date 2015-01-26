@@ -12,7 +12,6 @@ Optional Base Styles
 #main {
 	max-width: $max-width;
 	margin: 40px auto 60px;
-	overflow: hidden;
 	padding: 0 20px;
 
 	@include wider-than(desktop) {

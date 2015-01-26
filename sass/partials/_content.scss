@@ -63,6 +63,26 @@ Site Content
 	margin: 0 0 1.5em;
 }
 
+.more-link {
+	display: block;
+	margin: 1.5em 0 0 -0.250em;
+	text-align: center;
+	text-transform: uppercase;
+	width: 150px;
+
+	a {
+		background: #1c1c1c;
+		color: #fff;
+		padding: 8px 12px;
+
+		&:hover {
+			background: #999;
+		}
+	}
+
+	@include rem(font-size, 12px);
+}
+
 // Asides
 
 .blog .format-aside .entry-title,

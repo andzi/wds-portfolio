@@ -260,3 +260,30 @@ function wds_portfolio_category_transient_flusher() {
 }
 add_action( 'edit_category', 'wds_portfolio_category_transient_flusher' );
 add_action( 'save_post',     'wds_portfolio_category_transient_flusher' );
+
+/*	Custom Excerpt  */
+
+if( ! function_exists( 'wds_portfolio_excerpt_length' ) ) {
+    function wds_portfolio_excerpt_length( $length ) {
+    	return 40;
+    }
+    add_filter( 'excerpt_length', 'wds_portfolio_excerpt_length' );
+}
+
+/**
+ * Returns a "Continue Reading" link for excerpts
+ */
+function wds_portfolio_reading_link() {
+	return ' <span class="more-link"><a href="'. esc_url( get_permalink() ) . '">' . __( 'Continue Reading', 'wds_portfolio' ) . '</a></span>';
+}
+
+/**
+ * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and wds_portfolio_reading_link().
+ *
+ * To override this in a child theme, remove the filter and add your own
+ * function tied to the excerpt_more filter hook.
+ */
+function wds_portfolio_auto_excerpt_more( $more ) {
+	return ' ... ' . wds_portfolio_reading_link();
+}
+add_filter( 'excerpt_more', 'wds_portfolio_auto_excerpt_more' );

@@ -20,13 +20,4 @@ $( '.portfolio-filter li' ).click( function(){
   return false;
 } );
 
-// change is-checked class on buttons
-$( '.portfolio-filter ul' ).each( function( i, filterItem ) {
-	var $filterItem = $( filterItem );
-	$filterItem.on( 'click', 'filter', function() {
-		$filterItem.find( '.active' ).removeClass( 'active' );
-		$( this ).addClass(' active' );
-	});
-});
-
 } );
