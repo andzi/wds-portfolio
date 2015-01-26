@@ -5,9 +5,19 @@
 	position: relative;
 
 	.site-branding{
-		display: block;
-		float: left;
+		text-align: center;
 		text-transform: uppercase;
+
+		@include wider-than(tablet) {
+			display: block;
+			float: none;
+		}
+
+		@include wider-than(desktop) {
+			display: block;
+			float: left;
+			text-align: left;
+		}
 	}
 
 	.site-title {

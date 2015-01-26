@@ -98,14 +98,51 @@ a {
 	display: none;
 }
 
-@media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
+@media screen and (max-width: 768px) {
+	.menu-toggle {
 		display: block;
+		letter-spacing: 1px;
+		margin: 0 auto;
+		text-align: center;
+		text-transform: uppercase;
+		@include rem(font-size, 13px);
+	}
+
+	.main-navigation {
+		float: none;
+		margin: 0 auto 14px;
+		position: relative;
+	}
+
+	.main-navigation.toggled .nav-menu {
+		background: #333;
+		display: block;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		position: absolute;
+ 		left: 0;
+    	right: 0;
+    	width: 60%;
+
+		li {
+			float: none;
+		}
+
+		a {
+			color: #fff;
+		}
 	}
 
 	.main-navigation ul {
 		display: none;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.menu-main-container {
+		clear: left;
+		float: right;
 	}
 }
 

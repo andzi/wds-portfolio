@@ -45,12 +45,15 @@ Site Content
 }
 
 .entry-meta {
+	letter-spacing: 1px;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 
 	@include rem(font-size, 12px);
 }
+
 .entry-footer{
+	text-transform: uppercase;
 	@include rem(font-size, 12px);
 
 	span {
