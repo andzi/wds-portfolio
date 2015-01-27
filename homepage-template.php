@@ -40,7 +40,7 @@ get_header();
 					$tax_terms = get_terms( $taxonomy );
 
 					foreach ( $tax_terms as $tax_term ) {
-					echo '<li class="filter" data-filter=".'. $tax_term->name.'">' . $tax_term->name .'</li>';
+					echo '<li class="filter" data-filter=".'. $tax_term->slug.'">' . $tax_term->slug .'</li>';
 					}
 				?>
 			</ul>

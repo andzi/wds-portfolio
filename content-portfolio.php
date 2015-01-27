@@ -13,7 +13,7 @@ if ( $terms && ! is_wp_error( $terms ) ) :
 	$filtering_links = array();
 
 	foreach ( $terms as $term ) {
-		$filtering_links[] = $term->name;
+		$filtering_links[] = $term->slug;
 	}
 						
 	$filtering = join( ", ", $filtering_links );
