@@ -14,18 +14,15 @@
 }
 
 .site-branding{
+	display: block;
+	float: left;
+	text-align: left;
 	text-transform: uppercase;
 
-	@include breakpoint(tablet) {
+	@media screen and (max-width: 700px) {
 		display: block;
 		float: none;
 		text-align: center;
-	}
-
-	@include wider-than(large-desktop) {
-		display: block;
-		float: left;
-		text-align: left;
 	}
 }
 

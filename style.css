@@ -1755,10 +1755,14 @@ video
 
 .site-branding
 {
+    display: block;
+    float: left;
+
+    text-align: left;
     text-transform: uppercase;
 }
 
-/* line 32, sass/partials/_header.scss */
+/* line 29, sass/partials/_header.scss */
 
 .site-title
 {
@@ -1773,14 +1777,14 @@ video
     letter-spacing: -.01em;
 }
 
-/* line 41, sass/partials/_header.scss */
+/* line 38, sass/partials/_header.scss */
 
 .site-title a
 {
     color: #1d1d1d;
 }
 
-/* line 44, sass/partials/_header.scss */
+/* line 41, sass/partials/_header.scss */
 
 .site-title a:hover
 {
@@ -1904,7 +1908,69 @@ video
     background: #000;
 }
 
-@media (tablet)
+@media screen and (min-width: 480px)
+{
+    /* line 83, sass/partials/_forms.scss */
+
+    input[type='text'],
+    input[type='email'],
+    input[type='url'],
+    input[type='password'],
+    input[type='search']
+    {
+        width: 50%;
+    }
+
+    /* line 2, sass/partials/_header.scss */
+
+    #masthead
+    {
+        padding: 10px;
+    }
+
+    /* line 60, sass/partials/_homepage.scss */
+
+    .portfolio .type-jetpack-portfolio
+    {
+        max-width: 100%;
+        min-height: inherit;
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+    /* line 7, sass/partials/_container.scss */
+
+    #main
+    {
+        padding: 0;
+    }
+
+    /* line 2, sass/partials/_header.scss */
+
+    #masthead
+    {
+        padding: 10px 0;
+    }
+
+    /* line 4, sass/partials/_homepage.scss */
+
+    .page-template-homepage-template-php .page-title
+    {
+        font-size: 48px;
+        font-size: 4.8rem;
+    }
+
+    /* line 60, sass/partials/_homepage.scss */
+
+    .portfolio .type-jetpack-portfolio
+    {
+        max-width: 239px;
+        max-height: 180px;
+    }
+}
+
+@media screen and (max-width: 700px)
 {
     /* line 92, sass/partials/_navigation.scss */
 
@@ -1992,72 +2058,7 @@ video
         float: right;
         clear: left;
     }
-}
 
-@media screen and (min-width: 480px)
-{
-    /* line 83, sass/partials/_forms.scss */
-
-    input[type='text'],
-    input[type='email'],
-    input[type='url'],
-    input[type='password'],
-    input[type='search']
-    {
-        width: 50%;
-    }
-
-    /* line 2, sass/partials/_header.scss */
-
-    #masthead
-    {
-        padding: 10px;
-    }
-
-    /* line 60, sass/partials/_homepage.scss */
-
-    .portfolio .type-jetpack-portfolio
-    {
-        max-width: 100%;
-        min-height: inherit;
-    }
-}
-
-@media screen and (min-width: 768px)
-{
-    /* line 7, sass/partials/_container.scss */
-
-    #main
-    {
-        padding: 0;
-    }
-
-    /* line 2, sass/partials/_header.scss */
-
-    #masthead
-    {
-        padding: 10px 0;
-    }
-
-    /* line 4, sass/partials/_homepage.scss */
-
-    .page-template-homepage-template-php .page-title
-    {
-        font-size: 48px;
-        font-size: 4.8rem;
-    }
-
-    /* line 60, sass/partials/_homepage.scss */
-
-    .portfolio .type-jetpack-portfolio
-    {
-        max-width: 239px;
-        max-height: 180px;
-    }
-}
-
-@media screen and (min-width: tablet)
-{
     /* line 16, sass/partials/_header.scss */
 
     .site-branding
@@ -2066,18 +2067,5 @@ video
         float: none;
 
         text-align: center;
-    }
-}
-
-@media screen and (min-width: 1000px)
-{
-    /* line 16, sass/partials/_header.scss */
-
-    .site-branding
-    {
-        display: block;
-        float: left;
-
-        text-align: left;
     }
 }
