@@ -33,7 +33,7 @@ get_header();
 
 		<div class="portfolio-filter">
 			<ul>
-				<li id="filter--all" class="filter active" data-filter="*"><?php _e( 'View All' ) ?></li>
+				<li id="filter--all" class="filter active" data-filter="*"><?php _e( 'View All', 'wds_portfolio' ) ?></li>
 				<?php 
 					// list terms in a given taxonomy
 					$taxonomy = 'jetpack-portfolio-type';

@@ -11,12 +11,6 @@
 			filter: '*',
 			layoutMode: 'fitRows',
 			resizable: true, 
-			masonry: {
-				columnWidth: 220
-			},
-			masonryHorizontal: {
-				rowHeight: 220
-		    }
 		  } );
 
 		// filter items when filter link is clicked
