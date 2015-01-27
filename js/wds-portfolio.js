@@ -1,5 +1,5 @@
 /**
- * Portoflio functions
+ * Portfolio functions
  */
 ( function( $ ) {
 	 $( window ).load( function() {
